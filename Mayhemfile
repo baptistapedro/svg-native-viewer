@@ -1,17 +1,5 @@
-# Mayhem by https://forallsecure.com
-# Mayhemfile: configuration file for testing your target with Mayhem
-# Format: YAML 1.1
-
-# Project name that the target belongs to
 project: svg-native-viewer
-
-# Target name (should be unique within the project)
 target: svg-native-viewer
 
-# List of commands used to test the target
 cmds:
-
-  # Command used to start the target, "@@" is the input file
-  # (when "@@" is omitted Mayhem defaults to stdin inputs)
-  - cmd: /adobe_svg_fuzz @@ out.svg
-    env: {}
+  - cmd: /adobe_svg_fuzz @@ /dev/null
